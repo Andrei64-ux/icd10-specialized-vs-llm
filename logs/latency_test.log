@@ -1,0 +1,17 @@
+Masurare pe 30 cazuri (text spaniol, acelasi set folosit si la comparatia F1)
+
+=== Model specializat (CPU, local, in-process) ===
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 29/201 [00:00<00:00, 236.12it/s]Loading weights:  29%|██▉       | 58/201 [00:00<00:00, 264.88it/s]Loading weights:  44%|████▍     | 89/201 [00:00<00:00, 284.13it/s]Loading weights:  62%|██████▏   | 125/201 [00:00<00:00, 299.72it/s]Loading weights:  78%|███████▊  | 156/201 [00:00<00:00, 268.43it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 345.76it/s]
+Model specializat:
+  n=30  medie=127.3ms  mediana=125.6ms  p95=180.6ms  min=57.9ms  max=182.9ms
+
+=== LLM generalist (mistral, Ollama, GPU) ===
+LLM generalist:
+  n=30  medie=4308.7ms  mediana=4078.6ms  p95=5004.9ms  min=2360.8ms  max=11051.5ms
+
+=== Rezumat ===
+Model specializat: 127.3ms/cerere in medie
+LLM generalist:    4308.7ms/cerere in medie
+Raport de viteza:  modelul specializat e de 33.8x mai rapid
+
+Nota: modelul specializat ruleaza pe CPU, LLM-ul ruleaza pe GPU (RTX 5050) - comparatia e, daca ceva, defavorabila modelului specializat din perspectiva hardware.

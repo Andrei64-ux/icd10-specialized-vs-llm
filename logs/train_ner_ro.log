@@ -1,0 +1,26 @@
+train: 500 cazuri | dev: 250 cazuri
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights:  17%|█▋        | 33/197 [00:00<00:00, 302.41it/s]Loading weights:  38%|███▊      | 75/197 [00:00<00:00, 368.59it/s]Loading weights:  57%|█████▋    | 113/197 [00:00<00:00, 366.24it/s]Loading weights:  76%|███████▌  | 150/197 [00:00<00:00, 356.67it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 447.90it/s]
+[transformers] [1mBertForTokenClassification LOAD REPORT[0m from: /home/iliuta/Doctorat/O1/scripts/ro_clinical_mlm_base
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+epoca 1: loss=0.1861 | F1_micro=0.962 F1_macro=0.495 F1_entitati=0.512 precizie_entitati=0.629 recall_entitati=0.432
+epoca 2: loss=0.0972 | F1_micro=0.959 F1_macro=0.638 F1_entitati=0.587 precizie_entitati=0.538 recall_entitati=0.647
+epoca 3: loss=0.0752 | F1_micro=0.967 F1_macro=0.631 F1_entitati=0.584 precizie_entitati=0.680 recall_entitati=0.511
+epoca 4: loss=0.0541 | F1_micro=0.967 F1_macro=0.642 F1_entitati=0.604 precizie_entitati=0.669 recall_entitati=0.550
+epoca 5: loss=0.0360 | F1_micro=0.965 F1_macro=0.660 F1_entitati=0.609 precizie_entitati=0.618 recall_entitati=0.601
+epoca 6: loss=0.0247 | F1_micro=0.962 F1_macro=0.672 F1_entitati=0.617 precizie_entitati=0.574 recall_entitati=0.668
+epoca 7: loss=0.0168 | F1_micro=0.964 F1_macro=0.669 F1_entitati=0.615 precizie_entitati=0.603 recall_entitati=0.627
+epoca 8: loss=0.0120 | F1_micro=0.968 F1_macro=0.641 F1_entitati=0.608 precizie_entitati=0.678 recall_entitati=0.552
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.24it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.24it/s]
+Model NER salvat in ./ner_model_ro

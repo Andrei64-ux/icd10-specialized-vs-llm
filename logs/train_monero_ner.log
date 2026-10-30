@@ -1,0 +1,26 @@
+train: 3988 propozitii | dev: 996 propozitii
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights:  72%|███████▏  | 141/197 [00:00<00:00, 1406.10it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 1887.45it/s]
+[transformers] [1mBertForTokenClassification LOAD REPORT[0m from: /home/iliuta/Doctorat/O1/scripts/ro_clinical_mlm_base
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+classifier.weight                          | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+epoca 1: loss=0.1826 | F1_micro=0.955 F1_macro=0.799 F1_entitati=0.820 precizie_entitati=0.841 recall_entitati=0.800
+epoca 2: loss=0.0907 | F1_micro=0.958 F1_macro=0.809 F1_entitati=0.835 precizie_entitati=0.833 recall_entitati=0.836
+epoca 3: loss=0.0544 | F1_micro=0.956 F1_macro=0.806 F1_entitati=0.825 precizie_entitati=0.825 recall_entitati=0.826
+epoca 4: loss=0.0340 | F1_micro=0.958 F1_macro=0.813 F1_entitati=0.834 precizie_entitati=0.827 recall_entitati=0.841
+epoca 5: loss=0.0220 | F1_micro=0.957 F1_macro=0.814 F1_entitati=0.833 precizie_entitati=0.820 recall_entitati=0.847
+epoca 6: loss=0.0175 | F1_micro=0.957 F1_macro=0.811 F1_entitati=0.833 precizie_entitati=0.815 recall_entitati=0.852
+epoca 7: loss=0.0148 | F1_micro=0.959 F1_macro=0.811 F1_entitati=0.835 precizie_entitati=0.836 recall_entitati=0.835
+epoca 8: loss=0.0133 | F1_micro=0.959 F1_macro=0.819 F1_entitati=0.838 precizie_entitati=0.838 recall_entitati=0.838
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.20it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.20it/s]
+Model NER (MoNERo, romana nativa) salvat in ./monero_ner_model

@@ -1,0 +1,17 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  77%|███████▋  | 153/199 [00:00<00:00, 1521.11it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1793.90it/s]
+=== Evaluare entity-level (span exact, seqeval) — MoNERo (română nativă) ===
+F1 (micro)      = 0.791
+Precizie (micro) = 0.774
+Recall (micro)   = 0.808
+
+              precision    recall  f1-score   support
+
+        ANAT      0.737     0.801     0.768       413
+        CHEM      0.810     0.827     0.818       813
+        DISO      0.794     0.832     0.813      1380
+        PROC      0.641     0.660     0.650       300
+
+   micro avg      0.774     0.808     0.791      2906
+   macro avg      0.746     0.780     0.762      2906
+weighted avg      0.775     0.808     0.791      2906
+

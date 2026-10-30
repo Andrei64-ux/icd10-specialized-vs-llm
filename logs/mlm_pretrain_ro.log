@@ -1,0 +1,30 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Corpus de domain adaptation: 500 documente (doar train, dev ramane netins)
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights:  11%|█▏        | 23/202 [00:00<00:00, 218.41it/s]Loading weights:  26%|██▌       | 52/202 [00:00<00:00, 246.75it/s]Loading weights:  41%|████      | 82/202 [00:00<00:00, 269.75it/s]Loading weights:  62%|██████▏   | 126/202 [00:00<00:00, 327.99it/s]Loading weights:  79%|███████▊  | 159/202 [00:00<00:00, 319.79it/s]Loading weights: 100%|██████████| 202/202 [00:00<00:00, 357.60it/s]
+[transformers] [1mBertForMaskedLM LOAD REPORT[0m from: dumitrescustefan/bert-base-romanian-cased-v1
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+cls.seq_relationship.bias   | UNEXPECTED |  | 
+bert.pooler.dense.weight    | UNEXPECTED |  | 
+bert.pooler.dense.bias      | UNEXPECTED |  | 
+cls.seq_relationship.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+epoca 1: MLM loss=2.5356
+epoca 2: MLM loss=2.3075
+epoca 3: MLM loss=2.1376
+epoca 4: MLM loss=2.0333
+epoca 5: MLM loss=1.9268
+epoca 6: MLM loss=1.8690
+epoca 7: MLM loss=1.8084
+epoca 8: MLM loss=1.7536
+epoca 9: MLM loss=1.7203
+epoca 10: MLM loss=1.6565
+epoca 11: MLM loss=1.6176
+epoca 12: MLM loss=1.5703
+epoca 13: MLM loss=1.5357
+epoca 14: MLM loss=1.4594
+epoca 15: MLM loss=1.4560
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.55it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.55it/s]
+Model adaptat de domeniu salvat in /home/iliuta/Doctorat/O1/scripts/ro_clinical_mlm_base

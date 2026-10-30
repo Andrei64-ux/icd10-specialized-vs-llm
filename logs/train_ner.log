@@ -1,0 +1,28 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+train: 500 cazuri | dev: 250 cazuri
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights:  58%|█████▊    | 115/197 [00:00<00:00, 1146.34it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 1437.10it/s]
+[transformers] [1mRobertaForTokenClassification LOAD REPORT[0m from: PlanTL-GOB-ES/bsc-bio-ehr-es
+Key                       | Status     | 
+--------------------------+------------+-
+lm_head.bias              | UNEXPECTED | 
+lm_head.dense.weight      | UNEXPECTED | 
+lm_head.layer_norm.weight | UNEXPECTED | 
+lm_head.decoder.bias      | UNEXPECTED | 
+lm_head.dense.bias        | UNEXPECTED | 
+lm_head.layer_norm.bias   | UNEXPECTED | 
+classifier.weight         | MISSING    | 
+classifier.bias           | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+epoca 1: loss=0.2998 | F1_micro=0.940 F1_macro=0.707 F1_entitati=0.650 precizie_entitati=0.649 recall_entitati=0.651
+epoca 2: loss=0.1437 | F1_micro=0.949 F1_macro=0.728 F1_entitati=0.679 precizie_entitati=0.741 recall_entitati=0.627
+epoca 3: loss=0.1165 | F1_micro=0.950 F1_macro=0.744 F1_entitati=0.694 precizie_entitati=0.735 recall_entitati=0.657
+epoca 4: loss=0.0932 | F1_micro=0.947 F1_macro=0.746 F1_entitati=0.696 precizie_entitati=0.685 recall_entitati=0.707
+epoca 5: loss=0.0768 | F1_micro=0.950 F1_macro=0.750 F1_entitati=0.703 precizie_entitati=0.712 recall_entitati=0.693
+epoca 6: loss=0.0615 | F1_micro=0.950 F1_macro=0.752 F1_entitati=0.702 precizie_entitati=0.711 recall_entitati=0.693
+epoca 7: loss=0.0491 | F1_micro=0.948 F1_macro=0.748 F1_entitati=0.696 precizie_entitati=0.697 recall_entitati=0.695
+epoca 8: loss=0.0404 | F1_micro=0.950 F1_macro=0.750 F1_entitati=0.697 precizie_entitati=0.723 recall_entitati=0.673
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.30s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.30s/it]
+Model NER salvat in ./ner_model

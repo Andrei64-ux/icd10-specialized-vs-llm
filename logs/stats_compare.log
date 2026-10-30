@@ -1,0 +1,21 @@
+Se incarca modelul ES si predictiile pe dev (spaniola)...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  63%|██████▎   | 127/201 [00:00<00:00, 1260.83it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 1378.80it/s]
+Se incarca modelul RO si predictiile pe dev (tradus)...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  60%|██████    | 121/201 [00:00<00:00, 1206.30it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 1359.00it/s]
+
+F1_micro ES=0.233  RO=0.193  diferenta=0.040
+
+=== McNemar BRUT (toate perechile caz-cod, inclusiv negative triviale) ===
+n perechi = 192250, b=3671, c=3647
+statistica = 0.07, p-value = 0.788035
+=> NESEMNIFICATIVA (diluat de negative triviale)
+
+=== McNemar RESTRICTIONAT (doar perechi relevante: adevar sau predictie pozitiva) ===
+n perechi relevante = 10830 (din 192250 total)
+b (ES corect, RO gresit) = 3671, c (ES gresit, RO corect) = 3647
+statistica = 0.07, p-value = 0.788035
+=> diferenta NESEMNIFICATIVA statistic
+
+=== Bootstrap CI 95% pentru F1_micro(ES) - F1_micro(RO) ===
+diferenta medie = 0.040, CI 95% = [0.029, 0.051]
+=> intervalul NU include 0 (semnificativ)

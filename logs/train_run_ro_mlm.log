@@ -1,0 +1,28 @@
+Spatiu de etichete: 769 coduri (prag>=2)
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights:  64%|██████▍   | 127/197 [00:00<00:00, 1253.45it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 1390.24it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: /home/iliuta/Doctorat/O1/scripts/ro_clinical_mlm_base
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+bert.pooler.dense.weight                   | MISSING    | 
+classifier.weight                          | MISSING    | 
+bert.pooler.dense.bias                     | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+epoca 1: loss=0.9057 | prag_optim=0.5 F1_micro=0.098 F1_macro=0.017 precizie_micro=0.060 recall_micro=0.271
+epoca 2: loss=0.7126 | prag_optim=0.5 F1_micro=0.109 F1_macro=0.055 precizie_micro=0.061 recall_micro=0.535
+epoca 3: loss=0.5096 | prag_optim=0.5 F1_micro=0.135 F1_macro=0.069 precizie_micro=0.078 recall_micro=0.508
+epoca 4: loss=0.3773 | prag_optim=0.5 F1_micro=0.128 F1_macro=0.076 precizie_micro=0.072 recall_micro=0.604
+epoca 5: loss=0.2918 | prag_optim=0.5 F1_micro=0.164 F1_macro=0.086 precizie_micro=0.099 recall_micro=0.488
+epoca 6: loss=0.2275 | prag_optim=0.5 F1_micro=0.183 F1_macro=0.093 precizie_micro=0.113 recall_micro=0.482
+epoca 7: loss=0.1867 | prag_optim=0.5 F1_micro=0.185 F1_macro=0.088 precizie_micro=0.115 recall_micro=0.479
+epoca 8: loss=0.1565 | prag_optim=0.5 F1_micro=0.209 F1_macro=0.094 precizie_micro=0.141 recall_micro=0.404
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]
+Model salvat in ./icd10_model_ro_mlm
